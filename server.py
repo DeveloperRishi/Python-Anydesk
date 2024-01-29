@@ -13,14 +13,16 @@ def start_server():
         print(f"Connection from {client_address}")
 
         handle_client(client_socket)
-
+print("Welcome To Rishi Anydesk BY Rishi Rao")
 def handle_client(client_socket):
     while True:
-        command = input("Enter command ('open website {url}', 'custom {your command}', 'type {text}', 'shortcut {keys}', 'open app {app_name}', 'press key {key_name}', 'screenshot', 'upload file {file_path}', 'download file {file_path}', 'system info', 'process list', 'terminate process {process_name}', 'shutdown', 'restart', 'log off', 'clipboard get', 'clipboard set {text_to_copy}', 'webcam capture', 'microphone record {duration}', 'help', 'exit'): ")
+        command = input("Enter command Sir : ")
         client_socket.send(command.encode())
 
         if command.lower() == 'exit':
             break
+        elif command.lower() == 'help':
+            display_help()
 
         response = client_socket.recv(1024).decode()
         print(f"Response from client: {response}")
