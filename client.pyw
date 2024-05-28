@@ -10,7 +10,7 @@ def start_client():
     while True:
         try:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            client_socket.connect(('localhost', 9999))
+            client_socket.connect(('localhost', 9999)) # Replace with Server Computer IP
             print("Connected to the server.")
             break
         except Exception as e:
@@ -120,14 +120,6 @@ def press_key(key_name):
 def take_screenshot():
     screenshot = pyautogui.screenshot()
     screenshot.save('screenshot.png')
-
-def upload_file(file_path):
-    # Implement file upload logic here
-    pass
-
-def download_file(file_path):
-    # Implement file download logic here
-    pass
 
 def get_system_info():
     system_info = platform.uname()
