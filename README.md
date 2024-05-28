@@ -1,2 +1,2 @@
 # Python-Anydesk
-Its just a simple thing
+It is a simple RAT (Remote Access Tool) written in Python
